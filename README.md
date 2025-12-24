@@ -2,7 +2,17 @@
 
 LLM tabanlı ajanlar kullanarak doğal dil ile veritabanı sorgulama sistemi. Kullanıcı Türkçe veya İngilizce bir soru sorar, sistem bunu SQL'e çevirip çalıştırır.
 
-![Veritabanı Şeması](Database.drawio.png)
+```mermaid
+flowchart LR
+    A[👤 Kullanıcı] --> B[🔍 Explorer]
+    B --> C[📋 Planner]
+    C --> D[💻 Coder]
+    D --> E[⚡ Executor]
+    E --> F[✅ Verifier]
+    F -->|Başarılı| G[📊 Sonuç]
+    F -->|Başarısız| D
+    E <--> H[(🗄️ Database)]
+```
 
 ## 🏗️ Mimari
 
