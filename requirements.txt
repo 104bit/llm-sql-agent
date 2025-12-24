@@ -1,0 +1,5 @@
+# Veritabanı Sorgu Sistemi Gereksinimleri
+# sqlite3 (built-in)
+requests
+psycopg2-binary  # PostgreSQL
+pymysql          # MySQL
