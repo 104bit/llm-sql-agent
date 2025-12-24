@@ -1,17 +1,15 @@
 # Veritabanı Sorgu Sistemi
 
+🇹🇷 Türkçe | [🇬🇧 English](README_EN.md)
+
 LLM tabanlı ajanlar kullanarak doğal dil ile veritabanı sorgulama sistemi. Kullanıcı Türkçe veya İngilizce bir soru sorar, sistem bunu SQL'e çevirip çalıştırır.
 
 ```mermaid
 flowchart LR
-    A[👤 Kullanıcı] --> B[🔍 Explorer]
-    B --> C[📋 Planner]
-    C --> D[💻 Coder]
-    D --> E[⚡ Executor]
-    E --> F[✅ Verifier]
-    F -->|Başarılı| G[📊 Sonuç]
-    F -->|Başarısız| D
-    E <--> H[(🗄️ Database)]
+    A[� Sorgu] --> B[📋 Planner] --> C[💻 Coder] --> D[⚡ Executor] --> E[✅ Verifier]
+    E -->|Başarılı| F[📊 Sonuç]
+    E -->|Tekrar| C
+    D <--> G[(Database)]
 ```
 
 ## 🏗️ Mimari
